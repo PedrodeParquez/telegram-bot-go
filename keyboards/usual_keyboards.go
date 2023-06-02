@@ -1,12 +1,11 @@
 package keyboards
 
-import "github.com/go-telegram-bot-api/telegram-bot-api/v5"
+import tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 
 // Создание клавиатуры с обычной
-var ButtonsKeyboard = []tgbotapi.KeyboardButton{
-  tgbotapi.NewKeyboardButton("Кнопка 1"),
-  tgbotapi.NewKeyboardButton("Кнопка 2"),
-  tgbotapi.NewKeyboardButton("Кнопка 3"),
+var ButtonsKeyboard = []tgbotapi.KeyboardButton {
+	tgbotapi.NewKeyboardButton("Удалить клавиатуру"),
+	tgbotapi.NewKeyboardButton("Восстановить клавиатуру"),
 }
 
-var Keyboard = tgbotapi.NewReplyKeyboard(ButtonsKeyboard)
+var UsualKeyboard = tgbotapi.NewReplyKeyboard(ButtonsKeyboard)
