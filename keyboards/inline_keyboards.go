@@ -7,7 +7,11 @@ var MainInlineKeyboard = tgbotapi.NewInlineKeyboardMarkup(
 	tgbotapi.NewInlineKeyboardRow(ButtonNews),
 	tgbotapi.NewInlineKeyboardRow(ButtonVoiceMessages),
 	tgbotapi.NewInlineKeyboardRow(ButtonUserForm),
-	tgbotapi.NewInlineKeyboardRow(ButtonNoKeyboard),
+)
+
+//Создание клавиатуры для голосового режима
+var InlineKeyboardVoiceMode = tgbotapi.NewInlineKeyboardMarkup(
+	tgbotapi.NewInlineKeyboardRow(ButtonExitVoiceMode),
 )
 
 // Создание инлайн клавиатуры для новостей
@@ -31,5 +35,5 @@ var (
 	ButtonVoiceMessages = tgbotapi.NewInlineKeyboardButtonData("Голосовые сообщения 🎙", "Голосовые сообщения")
 	ButtonUserForm      = tgbotapi.NewInlineKeyboardButtonData("Пройти анкету 🤠", "Пройти анкету")
 	ButtonHome          = tgbotapi.NewInlineKeyboardButtonData("На главную 🏠", "На главную")
-	ButtonNoKeyboard    = tgbotapi.NewInlineKeyboardButtonData("Удалить клавиатуру ❌", "Удалить клавиатуру")
+	ButtonExitVoiceMode = tgbotapi.NewInlineKeyboardButtonData("Выйти из голоcового режима ⬅", "Выйти из голосового режима")
 )
