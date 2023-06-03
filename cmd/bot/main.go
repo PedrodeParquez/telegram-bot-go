@@ -52,9 +52,7 @@ func main() {
 				"Теперь я реагирую только на голосовые сообщения 🤯" +
 				"\nЧтобы вернуться в обычный режим нажмите на кнопку!",
 				&keyboards.InlineKeyboardVoiceMode)
-				task.ModeOnlyVoiceMessage = true
-			case "Пройти анкету":
-				
+				task.ModeOnlyVoiceMessage = true		
 			case "На главную":
 				message.SendInlineKeyboard(bot, update.CallbackQuery.Message.From.ID, "Выберите действие:", &keyboards.MainInlineKeyboard)
 			}
