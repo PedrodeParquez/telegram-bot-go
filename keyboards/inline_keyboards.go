@@ -6,10 +6,11 @@ import tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 var MainInlineKeyboard = tgbotapi.NewInlineKeyboardMarkup(
 	tgbotapi.NewInlineKeyboardRow(ButtonNews),
 	tgbotapi.NewInlineKeyboardRow(ButtonVoiceMessages),
+	tgbotapi.NewInlineKeyboardRow(ButtonSendJoke),
 	tgbotapi.NewInlineKeyboardRow(ButtonUserForm),
 )
 
-//Создание клавиатуры для голосового режима
+// Создание клавиатуры для голосового режима
 var InlineKeyboardVoiceMode = tgbotapi.NewInlineKeyboardMarkup(
 	tgbotapi.NewInlineKeyboardRow(ButtonExitVoiceMode),
 )
@@ -33,7 +34,8 @@ var (
 // Остальные инлайн кнопки
 var (
 	ButtonVoiceMessages = tgbotapi.NewInlineKeyboardButtonData("Голосовые сообщения 🎙", "Голосовые сообщения")
-	ButtonUserForm      = tgbotapi.NewInlineKeyboardButtonData("Пройти анкету 🤠", "Пройти анкету")
-	ButtonHome          = tgbotapi.NewInlineKeyboardButtonData("На главную 🏠", "На главную")
 	ButtonExitVoiceMode = tgbotapi.NewInlineKeyboardButtonData("Выйти из голоcового режима ⬅", "Выйти из голосового режима")
+	ButtonUserForm      = tgbotapi.NewInlineKeyboardButtonData("Пройти интервью 🤠", "Пройти интервью")
+	ButtonHome          = tgbotapi.NewInlineKeyboardButtonData("На главную 🏠", "На главную")
+	ButtonSendJoke      = tgbotapi.NewInlineKeyboardButtonData("Хочу шутку 🙊", "Хочу шутку")
 )
